@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+
+ * {
+   margin : 0;
+   padding : 0;
+   box-sizing : border-box;
+   font-family: 'Rubik', sans-serif;
+ }
+
+ :root  {
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  
+  
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%)
+ }
+
+ html {
+   overflow : hidden;
+
+ }
+
+ body {
+   height : 100vh;
+   overflow : hidden;
+   display : flex;
+   justify-content : center;
+   width : 100%;
+   position : relative;
+   /* background : #ccc; */
+ }
+
+ .top__background {
+   position : absolute;
+   height : 70vh;
+   left : -4rem;
+   background-image : linear-gradient(to bottom,hsl(293, 100%, 63% ),hsl(264, 100%, 61%) );
+   width : 15rem;
+   border-radius : 100px;
+   top : -6rem;
+   z-index : -1;
+ }
+
+ .bottom__background {
+   position : absolute;
+   bottom : 0;
+   right : 0;
+   background : rgba(255, 192, 203, 0.432);
+   height : 50vh;
+   width : 15rem;
+   border-radius : 100px;
+   bottom : -7rem;
+   right : -3rem;
+   z-index : -1;
+
+ }
+
+ .container {
+   display : flex;
+   flex-direction : column;
+   align-items : center;
+  /* margin-top : 1rem; */
+
+ }
+
+ .phone__wrapper {
+    display : flex;
+    flex-direction : column;
+    /* background  : rgb(238, 161, 161); */
+    background : white;
+    padding : .9rem .7rem;
+    width : 20rem;
+    border-radius : 40px;
+    box-shadow : 1px 1px 20px 10px rgba(0, 0, 0 , .2);
+    transform : scale(.9);
+ }
+
+ .screen {
+   display : flex;
+   flex-direction : column;
+   background : white;
+   border-radius : 30px;
+ }
+
+ .avatar__wrapper {
+  display : flex;
+  flex-direction : row;
+  /* justify-content : center; */
+  background-image : linear-gradient(to bottom,hsl(293, 100%, 63% ),hsl(264, 100%, 61%) );
+  align-items : center;
+  gap : .1rem;
+  border-radius : 30px 30px 0px 0px;
+  height : 6rem;
+  padding : 1rem 1rem;
+  position : relative;
+  /* overflow : hidden; */
+ }
+ .avatar__wrapper:after {
+   position : absolute;
+   content : '';
+   width : 50%;
+   left : 27%;
+   height : 35%;
+   background : white;
+   border-radius : 30px;
+   top : -.8rem;
+ }
+
+ .arrow {
+    margin-left : .5rem;
+    margin-top : 1rem;
+ }
+ .arrow i {
+  color : white;
+ }
+
+
+ .profile__wrapper {
+   display : flex;
+   justify-content : center;
+   align-items : center;
+   gap : .5rem;
+   margin-left : .5rem;
+   margin-top : 1rem;
+   padding : .4rem .5rem;
+   /* background : red; */
+ }
+
+ .profile__img {
+     position : relative;
+     width : 40px;
+     height : 35px;
+     display : flex;
+     border-radius : 50%;
+     background : white;
+     justify-content : center;
+     align-items : center;
+ }
+ .profile__img img {
+   position : absolute;
+   width : 90%;
+   height : 90%;
+   border-radius : 50%;
+ }
+
+ .active__wrapper {
+   display : flex;
+   justify-content : center;
+   flex-direction : column;
+   
+ }
+ .name {
+   font-size : .7rem;
+   color : white;
+   width : 90px;
+   white-space : nowrap;
+ }
+ .active {
+   font-size : .6rem;
+   color : #fff;
+   font-weight : lighter;
+ }
+
+ .list__wrapper {
+   display : flex;
+   flex-direction : column;
+   gap : .2rem;
+   margin-left : 4.5rem;
+ }
+ .circle {
+    width : 5px;
+    height : 5px;
+    background : rgba(255, 255, 255, 0.637);
+    border-radius : 50%;
+ }
+
+ .chat__wrapper {
+   display : flex;
+   flex-direction : column;
+   background : var(--Light-Grayish-Violet);
+   padding : 1rem 1rem;
+   border-radius : 0px 0px 30px 30px;
+ }
+ .left__chat__wrapper {
+   display : flex;
+   flex-direction : column;
+   gap : .6rem;
+   align-items : left;
+ }
+ .left__chat__card {
+   background : rgba(245, 152, 245, 0.253);
+   border-radius : 20px 20px 20px 5px;
+   padding : .7rem .5rem;
+   font-size : .6rem;
+   width : 60%;
+   color : var(--Moderate-Violet);
+   display : flex;
+   justify-content : initial;
+   align-items : initial;
+
+ }
+
+ .right__chat__wrapper {
+   display : flex;
+   flex-direction : column;
+   margin-top : 1rem;
+   align-self : right;
+   gap : .5rem;
+   margin-bottom : 1rem;
+   position : relative;
+   left : 7.5rem;
+ }
+ .chat__picture__wrapper {
+   display : flex;
+   gap : .5rem;
+ }
+ .dogImg {
+   width : 45px;
+   height : 45px;
+   border-radius : 10px;
+ }
+ .right__chat__card {
+   display : flex; 
+   background : rgb(255, 255, 255);
+   padding : .4rem .4rem;
+   border-radius : 10px 10px 0px 10px;
+   width : 55%;
+   font-size : .6rem;
+   line-height : 1.4;
+   box-shadow : 1px 1px 10px 5px rgba(0, 0, 0, .1);
+   font-weight : 400;
+   color : rgb(77, 74, 74);
+ }
+#chat__card__1 {
+  width : 55%;
+  text-align : left;
+  left : 9px;
+  position : relative;
+}
+#chat__card__2 {
+  width : 40%;
+  position : relative;
+  left : 48px;
+}
+ .walk__wrapper {
+   display : flex;
+   flex-direction : column;
+   gap : .5rem;
+   margin-top : 1rem;
+ }
+
+ .walk__card {
+  background-image : linear-gradient(to right,hsl(293, 100%, 63% ),hsl(264, 100%, 61%) );
+  border-radius : 20px 20px 20px 0px;
+  width : 70%;
+  padding : .3rem .5rem;
+  display : flex;
+  align-items : center;
+ }
+
+ .checkbox {
+   border : 1px solid rgb(214, 210, 210);
+   border-radius : 50%;
+   width : 15px;
+   height : 13px;
+   cursor : pointer;
+   transition : all .2s ease-in-out;
+ }
+ .time__walk {
+   font-size : .6rem;
+   margin-left : .4rem;
+   color : white;
+   white-space : nowrap;
+ }
+ .price {
+   margin-left : 2.2rem;
+   color : white;
+   font-size : .9rem;
+   font-weight : 500;
+ }
+ #price2 {
+   margin-left : 3.5rem;
+   color : white;
+ }
+
+ .type__box__wrapper {
+   background : white;
+   margin-top : 1rem;
+   padding : .5rem 1rem;
+   border-radius : 40px;
+   display : flex;
+   justify-content : space-between;
+ }
+.type-box {
+  border : none;
+  outline : none;
+  padding : 0 .5rem;
+  color : rgb(219, 216, 216);
+  font-size : .7rem;
+}
+
+.send__button {
+  width : 20px;
+  height : 20px;
+  background : black;
+  color : white;
+  border-radius : 50%;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  cursor : pointer;
+  transition : all .3s ease-in-out;
+  
+}
+.send__button i {
+  font-size : .6rem;
+}
+
+.description__wrapper {
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  width : 20rem;
+  text-align : center;
+  gap : 1rem;
+  line-height : 1.4;
+}
+
+.heading {
+  font-size : 2rem;
+  color : black;
+
+}
+.description {
+  font-size : 1rem;
+  color : #ccc;
+}
+
+
+@media (min-width : 1000px) {
+  body {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+  }
+
+  .top__background {
+    position : absolute;
+    height : 70vh;
+    left : -1rem;
+    background-image : linear-gradient(to bottom,hsl(293, 100%, 63% ),hsl(264, 100%, 61%) );
+    width : 25rem;
+    border-radius : 250px;
+    top : -7rem;
+    z-index : -1;
+    transform : scale(1.5);
+  }
+ 
+  .bottom__background {
+    position : absolute;
+    bottom : 0;
+    right : 0;
+    background : rgba(255, 192, 203, 0.226);
+    height : 70vh;
+    width : 25rem;
+    border-radius : 200px;
+    bottom : -6rem;
+    right : -1rem;
+    z-index : -1;
+    transform : scale(1.5);
+ 
+  }
+
+  .container {
+    display : flex;
+    flex-direction : row;
+    gap : 4rem;
+    padding : 1rem 1rem;
+    width : 55rem;
+    transform : scale(1.3);
+  }
+
+  .description__wrapper {
+    display : flex;
+    flex-direction : column;
+    justify-content : initial;
+    align-items : initial;
+    text-align : left;
+    gap : 1rem;
+    line-height : 1.4;
+    margin-left : 3rem;
+    padding : 1rem .3rem;
+    width : auto;
+    height : auto;
+  }
+  
+  .heading {
+    font-size : 2.2rem;
+    color : black;
+  
+  }
+  .description {
+    font-size : .8rem;
+    color : rgba(114, 108, 108, 0.986);
+    line-height : 1.5;
+  }
+}
