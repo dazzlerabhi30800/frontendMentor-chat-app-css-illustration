@@ -356,11 +356,11 @@
   }
 
   .top__background {
-    position : absolute;
-    height : 70vh;
-    left : -1rem;
+    position : fixed;
+    height : 80vh;
+    left : 3%;
     background-image : linear-gradient(to bottom,hsl(293, 100%, 63% ),hsl(264, 100%, 61%) );
-    width : 25rem;
+    width : 25em;
     border-radius : 250px;
     top : -7rem;
     z-index : -1;
@@ -368,11 +368,11 @@
   }
  
   .bottom__background {
-    position : absolute;
+    position : fixed;
     bottom : 0;
     right : 0;
     background : rgba(255, 192, 203, 0.226);
-    height : 70vh;
+    height : 60vh;
     width : 25rem;
     border-radius : 200px;
     bottom : -6rem;
